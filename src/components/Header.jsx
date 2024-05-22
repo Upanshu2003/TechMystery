@@ -1,13 +1,14 @@
 import { useLocation} from "react-router-dom";
-import Logo from "../assets/TechLogo.png";
+import Logo from "../assets/TechMysteryLogo.png";
 import { navigation } from "./constants/index.js";
+import Button from "./button.jsx";
 const Header = () => {
     const pathname = useLocation();
     return (
-        <div className="fixed top-0 z-50 bg-n-8/90 backdrop-blur-sm border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm">
+        <div className="fixed top-0 left-0 w-full z-50 bg-n-8/90 backdrop-blur-sm border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm">
             <div className="flex items-center px-5 lg:px-7.5 xl:px-10 py-4 max-lg:py-4">
                 <a className="block w-[12rem] xl:mr-8" href="/">
-                    <img src={Logo} width={78} alt='Tech Mystery' />
+                    <img src={Logo} width={208} alt='Tech Mystery' />
                 </a>
                 <nav className="hidden fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:flex-row">
                     {navigation.map((item) =>
@@ -20,6 +21,12 @@ const Header = () => {
                             {item.title}
                         </a>)}
                 </nav>
+                <a href="#signup" className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block">
+                    New account
+                </a>
+                <Button className="hidden lg:flex" href="login">
+                    Sign In
+                </Button>
             </div>
         </div>
     )

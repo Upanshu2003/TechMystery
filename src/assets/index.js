@@ -1,4 +1,4 @@
-import Logo from "./TechLogo.png";
+import Logo from "./TechMysteryLogo.png";
 import check from "./check.svg";
 import techfavicon from "./techfavicon.svg";
 import play from "./play.svg";
